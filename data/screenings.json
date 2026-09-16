@@ -1,0 +1,1840 @@
+[
+  {
+    "id": "dbec1b12",
+    "timestamp": "2026-09-17 00:48:24",
+    "job_title": "Senior Frontend / Full-Stack Developer",
+    "job_description": "Job Title: Senior Frontend / Full-Stack Developer\nDepartment: Engineering\nLocation: Remote / Hybrid\n\nAbout the Role:\nWe are seeking a talented Senior Frontend / Full-Stack Developer to design and build scalable, user-centric web applications. You will partner closely with product managers and designers to deliver high-quality software experiences.\n\nKey Responsibilities:\n- Build robust, accessible, and high-performance web applications using React, Next.js, and TypeScript.\n- Architect and maintain backend services and REST APIs with Node.js and Express.\n- Model data schemas and optimize database queries using SQL and PostgreSQL.\n- Develop clean, modern, and responsive user interfaces with HTML/CSS and Tailwind CSS.\n- Package applications with Docker and participate in modern CI/CD deployment pipelines.\n- Maintain code reliability and test coverage through unit testing and integration testing.\n- Collaborate in an Agile/Scrum team using Git/GitHub for branching, pull requests, and code reviews.\n\nRequired Qualifications & Skills:\n- 4+ years of professional software engineering experience.\n- Expert knowledge of JavaScript and TypeScript.\n- Proven hands-on experience building production applications with React and Next.js.\n- Strong proficiency in modern UI styling using HTML/CSS and Tailwind CSS.\n- Solid server-side development experience with Node.js and REST APIs.\n- Practical database experience with SQL (PostgreSQL or MySQL).\n- Familiarity with containerization via Docker and CI/CD automation workflows.\n- Experience with unit testing frameworks (e.g. Jest, Cypress).\n- Version control fluency with Git/GitHub.\n- Demonstrated communication, proactive problem solving, and cross-functional teamwork.\n- Bachelor's or Master's degree in Computer Science, Software Engineering, or equivalent practical background.",
+    "candidates": [
+      {
+        "candidate_name": "Alex Rivera",
+        "overall_score": 86.4,
+        "recommendation": "Strong Match - High Priority Interview",
+        "badge_class": "success",
+        "breakdown": {
+          "skills": {
+            "score": 100.0,
+            "weight": "45%",
+            "weighted_contribution": 45.0,
+            "matched_count": 23,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 45.7,
+            "weight": "25%",
+            "weighted_contribution": 11.4,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 11.0,
+            "required_years": 4,
+            "summary": "Detected ~11.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Senior"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": [
+              "AWS Certified",
+              "Certified ScrumMaster",
+              "CSM"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Communication",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [],
+        "additional_skills": [
+          "AWS",
+          "GraphQL",
+          "Leadership",
+          "Linux",
+          "Microservices",
+          "Prisma",
+          "Python",
+          "Redis",
+          "Redux",
+          "TDD",
+          "Webpack"
+        ],
+        "strengths": [
+          "Exceptional skills alignment (23/23 required competencies covered).",
+          "Demonstrates sufficient industry tenure (11.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Senior.",
+          "Holds industry credentials: AWS Certified, Certified ScrumMaster, CSM.",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": []
+      },
+      {
+        "candidate_name": "Priya Sharma",
+        "overall_score": 69.1,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 69.6,
+            "weight": "45%",
+            "weighted_contribution": 31.3,
+            "matched_count": 16,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 39.1,
+            "weight": "25%",
+            "weighted_contribution": 9.8,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Code Review",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "Next.js",
+          "Node.js",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "Tailwind CSS",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Cypress",
+          "Docker",
+          "MySQL",
+          "PostgreSQL",
+          "SQL",
+          "Teamwork"
+        ],
+        "additional_skills": [
+          "Jira",
+          "Redux",
+          "Vite"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, Code Review, Communication.",
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: CI/CD, Cypress, Docker, MySQL."
+        ]
+      },
+      {
+        "candidate_name": "Marcus Chen",
+        "overall_score": 66.5,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 60.9,
+            "weight": "45%",
+            "weighted_contribution": 27.4,
+            "matched_count": 14,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 36.2,
+            "weight": "25%",
+            "weighted_contribution": 9.1,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 12.0,
+            "required_years": 4,
+            "summary": "Detected ~12.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Architect"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Master's Degree",
+            "certifications": [
+              "AWS Solutions Architect",
+              "CKA",
+              "Certified Kubernetes Administrator"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "MySQL",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "SQL",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "Communication",
+          "Cypress",
+          "HTML/CSS",
+          "Jest",
+          "Next.js",
+          "React",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript"
+        ],
+        "additional_skills": [
+          "AWS",
+          "Collaboration",
+          "FastAPI",
+          "GraphQL",
+          "Jira",
+          "Kubernetes",
+          "Linux",
+          "Microservices",
+          "Mocha",
+          "PyTest",
+          "Python",
+          "Redis",
+          "TDD",
+          "Terraform"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, CI/CD, Code Review.",
+          "Demonstrates sufficient industry tenure (12.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Architect.",
+          "Holds industry credentials: AWS Solutions Architect, CKA, Certified Kubernetes Administrator.",
+          "Academic foundation in Master's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: Communication, Cypress, HTML/CSS, Jest."
+        ]
+      },
+      {
+        "candidate_name": "Jordan Taylor",
+        "overall_score": 50.0,
+        "recommendation": "Moderate Match - Additional Assessment Advised",
+        "badge_class": "warning",
+        "breakdown": {
+          "skills": {
+            "score": 39.1,
+            "weight": "45%",
+            "weighted_contribution": 17.6,
+            "matched_count": 9,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 25.8,
+            "weight": "25%",
+            "weighted_contribution": 6.5,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 5.0,
+            "required_years": 4,
+            "summary": "Detected ~5.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 60.0,
+            "weight": "10%",
+            "weighted_contribution": 6.0,
+            "highest_degree": "Associate's / Diploma",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Node.js",
+          "REST APIs",
+          "React"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Bootstrap",
+          "Collaboration"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (5.0 years vs 4+ required).",
+          "Academic foundation in Associate's / Diploma."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (9/23 skills detected).",
+          "Key required skills not evident in resume: CI/CD, Code Review, Cypress, Docker."
+        ]
+      },
+      {
+        "candidate_name": "Samantha Brooks",
+        "overall_score": 35.8,
+        "recommendation": "Low Alignment - Foundational Skill Gaps",
+        "badge_class": "danger",
+        "breakdown": {
+          "skills": {
+            "score": 13.0,
+            "weight": "45%",
+            "weighted_contribution": 5.9,
+            "matched_count": 3,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 7.6,
+            "weight": "25%",
+            "weighted_contribution": 1.9,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Communication",
+          "HTML/CSS",
+          "Problem Solving"
+        ],
+        "missing_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Time Management"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (3/23 skills detected).",
+          "Key required skills not evident in resume: Agile/Scrum, CI/CD, Code Review, Cypress."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "952e3501",
+    "timestamp": "2026-09-17 00:23:00",
+    "job_title": "Frontend Software Engineer",
+    "job_description": "Requirements: React, TypeScript, Node.js, SQL, Git, 3+ years experience, Bachelor degree.",
+    "candidates": [
+      {
+        "candidate_name": "Priya Sharma",
+        "overall_score": 69.0,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 83.3,
+            "weight": "45%",
+            "weighted_contribution": 37.5,
+            "matched_count": 5,
+            "total_required": 6
+          },
+          "text_similarity": {
+            "score": 14.1,
+            "weight": "25%",
+            "weighted_contribution": 3.5,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 3,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 3+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Git/GitHub",
+          "JavaScript",
+          "Node.js",
+          "React",
+          "TypeScript"
+        ],
+        "missing_skills": [
+          "SQL"
+        ],
+        "additional_skills": [
+          "Agile/Scrum",
+          "Code Review",
+          "Communication",
+          "Express",
+          "HTML/CSS",
+          "Jest",
+          "Jira",
+          "Next.js",
+          "Problem Solving",
+          "REST APIs",
+          "Redux",
+          "Tailwind CSS",
+          "Unit testing",
+          "Vite"
+        ],
+        "strengths": [
+          "Exceptional skills alignment (5/6 required competencies covered).",
+          "Demonstrates sufficient industry tenure (10.0 years vs 3+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Missing a few secondary requirements: SQL."
+        ],
+        "source_filename": "Priya_Sharma_Resume.docx",
+        "rank": 1
+      },
+      {
+        "candidate_name": "David Kim",
+        "overall_score": 65.6,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 100.0,
+            "weight": "45%",
+            "weighted_contribution": 45.0,
+            "matched_count": 6,
+            "total_required": 6
+          },
+          "text_similarity": {
+            "score": 32.4,
+            "weight": "25%",
+            "weighted_contribution": 8.1,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 22.7,
+            "weight": "20%",
+            "weighted_contribution": 4.5,
+            "estimated_years": 0.8,
+            "required_years": 3,
+            "summary": "Detected ~0.8 years of experience, below the targeted 3+ years.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Git/GitHub",
+          "JavaScript",
+          "Node.js",
+          "React",
+          "SQL",
+          "TypeScript"
+        ],
+        "missing_skills": [],
+        "additional_skills": [
+          "Docker",
+          "Next.js"
+        ],
+        "strengths": [
+          "Exceptional skills alignment (6/6 required competencies covered).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Experience level (0.8 yrs) is under the preferred 3+ years."
+        ],
+        "source_filename": "David_Kim_Resume.pdf",
+        "rank": 2
+      }
+    ]
+  },
+  {
+    "id": "e3abc5ac",
+    "timestamp": "2026-09-17 00:23:00",
+    "job_title": "Senior Frontend / Full-Stack Developer",
+    "job_description": "Job Title: Senior Frontend / Full-Stack Developer\nDepartment: Engineering\nLocation: Remote / Hybrid\n\nAbout the Role:\nWe are seeking a talented Senior Frontend / Full-Stack Developer to design and build scalable, user-centric web applications. You will partner closely with product managers and designers to deliver high-quality software experiences.\n\nKey Responsibilities:\n- Build robust, accessible, and high-performance web applications using React, Next.js, and TypeScript.\n- Architect and maintain backend services and REST APIs with Node.js and Express.\n- Model data schemas and optimize database queries using SQL and PostgreSQL.\n- Develop clean, modern, and responsive user interfaces with HTML/CSS and Tailwind CSS.\n- Package applications with Docker and participate in modern CI/CD deployment pipelines.\n- Maintain code reliability and test coverage through unit testing and integration testing.\n- Collaborate in an Agile/Scrum team using Git/GitHub for branching, pull requests, and code reviews.\n\nRequired Qualifications & Skills:\n- 4+ years of professional software engineering experience.\n- Expert knowledge of JavaScript and TypeScript.\n- Proven hands-on experience building production applications with React and Next.js.\n- Strong proficiency in modern UI styling using HTML/CSS and Tailwind CSS.\n- Solid server-side development experience with Node.js and REST APIs.\n- Practical database experience with SQL (PostgreSQL or MySQL).\n- Familiarity with containerization via Docker and CI/CD automation workflows.\n- Experience with unit testing frameworks (e.g. Jest, Cypress).\n- Version control fluency with Git/GitHub.\n- Demonstrated communication, proactive problem solving, and cross-functional teamwork.\n- Bachelor's or Master's degree in Computer Science, Software Engineering, or equivalent practical background.",
+    "candidates": [
+      {
+        "candidate_name": "Alex Rivera",
+        "overall_score": 86.4,
+        "recommendation": "Strong Match - High Priority Interview",
+        "badge_class": "success",
+        "breakdown": {
+          "skills": {
+            "score": 100.0,
+            "weight": "45%",
+            "weighted_contribution": 45.0,
+            "matched_count": 23,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 45.7,
+            "weight": "25%",
+            "weighted_contribution": 11.4,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 11.0,
+            "required_years": 4,
+            "summary": "Detected ~11.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Senior"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": [
+              "AWS Certified",
+              "Certified ScrumMaster",
+              "CSM"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Communication",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [],
+        "additional_skills": [
+          "AWS",
+          "GraphQL",
+          "Leadership",
+          "Linux",
+          "Microservices",
+          "Prisma",
+          "Python",
+          "Redis",
+          "Redux",
+          "TDD",
+          "Webpack"
+        ],
+        "strengths": [
+          "Exceptional skills alignment (23/23 required competencies covered).",
+          "Demonstrates sufficient industry tenure (11.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Senior.",
+          "Holds industry credentials: AWS Certified, Certified ScrumMaster, CSM.",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [],
+        "source_filename": "Alex_Rivera_Resume.txt",
+        "rank": 1
+      },
+      {
+        "candidate_name": "Priya Sharma",
+        "overall_score": 69.1,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 69.6,
+            "weight": "45%",
+            "weighted_contribution": 31.3,
+            "matched_count": 16,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 39.1,
+            "weight": "25%",
+            "weighted_contribution": 9.8,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Code Review",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "Next.js",
+          "Node.js",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "Tailwind CSS",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Cypress",
+          "Docker",
+          "MySQL",
+          "PostgreSQL",
+          "SQL",
+          "Teamwork"
+        ],
+        "additional_skills": [
+          "Jira",
+          "Redux",
+          "Vite"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, Code Review, Communication.",
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: CI/CD, Cypress, Docker, MySQL."
+        ],
+        "source_filename": "Priya_Sharma_Resume.txt",
+        "rank": 2
+      },
+      {
+        "candidate_name": "Marcus Chen",
+        "overall_score": 66.5,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 60.9,
+            "weight": "45%",
+            "weighted_contribution": 27.4,
+            "matched_count": 14,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 36.2,
+            "weight": "25%",
+            "weighted_contribution": 9.1,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 12.0,
+            "required_years": 4,
+            "summary": "Detected ~12.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Architect"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Master's Degree",
+            "certifications": [
+              "AWS Solutions Architect",
+              "CKA",
+              "Certified Kubernetes Administrator"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "MySQL",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "SQL",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "Communication",
+          "Cypress",
+          "HTML/CSS",
+          "Jest",
+          "Next.js",
+          "React",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript"
+        ],
+        "additional_skills": [
+          "AWS",
+          "Collaboration",
+          "FastAPI",
+          "GraphQL",
+          "Jira",
+          "Kubernetes",
+          "Linux",
+          "Microservices",
+          "Mocha",
+          "PyTest",
+          "Python",
+          "Redis",
+          "TDD",
+          "Terraform"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, CI/CD, Code Review.",
+          "Demonstrates sufficient industry tenure (12.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Architect.",
+          "Holds industry credentials: AWS Solutions Architect, CKA, Certified Kubernetes Administrator.",
+          "Academic foundation in Master's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: Communication, Cypress, HTML/CSS, Jest."
+        ],
+        "source_filename": "Marcus_Chen_Resume.txt",
+        "rank": 3
+      },
+      {
+        "candidate_name": "Jordan Taylor",
+        "overall_score": 50.0,
+        "recommendation": "Moderate Match - Additional Assessment Advised",
+        "badge_class": "warning",
+        "breakdown": {
+          "skills": {
+            "score": 39.1,
+            "weight": "45%",
+            "weighted_contribution": 17.6,
+            "matched_count": 9,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 25.8,
+            "weight": "25%",
+            "weighted_contribution": 6.5,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 5.0,
+            "required_years": 4,
+            "summary": "Detected ~5.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 60.0,
+            "weight": "10%",
+            "weighted_contribution": 6.0,
+            "highest_degree": "Associate's / Diploma",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Node.js",
+          "REST APIs",
+          "React"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Bootstrap",
+          "Collaboration"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (5.0 years vs 4+ required).",
+          "Academic foundation in Associate's / Diploma."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (9/23 skills detected).",
+          "Key required skills not evident in resume: CI/CD, Code Review, Cypress, Docker."
+        ],
+        "source_filename": "Jordan_Taylor_Resume.txt",
+        "rank": 4
+      },
+      {
+        "candidate_name": "Samantha Brooks",
+        "overall_score": 35.8,
+        "recommendation": "Low Alignment - Foundational Skill Gaps",
+        "badge_class": "danger",
+        "breakdown": {
+          "skills": {
+            "score": 13.0,
+            "weight": "45%",
+            "weighted_contribution": 5.9,
+            "matched_count": 3,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 7.6,
+            "weight": "25%",
+            "weighted_contribution": 1.9,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Communication",
+          "HTML/CSS",
+          "Problem Solving"
+        ],
+        "missing_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Time Management"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (3/23 skills detected).",
+          "Key required skills not evident in resume: Agile/Scrum, CI/CD, Code Review, Cypress."
+        ],
+        "source_filename": "Samantha_Brooks_Resume.txt",
+        "rank": 5
+      }
+    ]
+  },
+  {
+    "id": "3f6bd0be",
+    "timestamp": "2026-09-17 00:16:00",
+    "job_title": "Senior Frontend / Full-Stack Developer",
+    "job_description": "Job Title: Senior Frontend / Full-Stack Developer\nDepartment: Engineering\nLocation: Remote / Hybrid\n\nAbout the Role:\nWe are seeking a talented Senior Frontend / Full-Stack Developer to design and build scalable, user-centric web applications. You will partner closely with product managers and designers to deliver high-quality software experiences.\n\nKey Responsibilities:\n- Build robust, accessible, and high-performance web applications using React, Next.js, and TypeScript.\n- Architect and maintain backend services and REST APIs with Node.js and Express.\n- Model data schemas and optimize database queries using SQL and PostgreSQL.\n- Develop clean, modern, and responsive user interfaces with HTML/CSS and Tailwind CSS.\n- Package applications with Docker and participate in modern CI/CD deployment pipelines.\n- Maintain code reliability and test coverage through unit testing and integration testing.\n- Collaborate in an Agile/Scrum team using Git/GitHub for branching, pull requests, and code reviews.\n\nRequired Qualifications & Skills:\n- 4+ years of professional software engineering experience.\n- Expert knowledge of JavaScript and TypeScript.\n- Proven hands-on experience building production applications with React and Next.js.\n- Strong proficiency in modern UI styling using HTML/CSS and Tailwind CSS.\n- Solid server-side development experience with Node.js and REST APIs.\n- Practical database experience with SQL (PostgreSQL or MySQL).\n- Familiarity with containerization via Docker and CI/CD automation workflows.\n- Experience with unit testing frameworks (e.g. Jest, Cypress).\n- Version control fluency with Git/GitHub.\n- Demonstrated communication, proactive problem solving, and cross-functional teamwork.\n- Bachelor's or Master's degree in Computer Science, Software Engineering, or equivalent practical background.",
+    "candidates": [
+      {
+        "candidate_name": "Alex Rivera",
+        "overall_score": 86.4,
+        "recommendation": "Strong Match - High Priority Interview",
+        "badge_class": "success",
+        "breakdown": {
+          "skills": {
+            "score": 100.0,
+            "weight": "45%",
+            "weighted_contribution": 45.0,
+            "matched_count": 23,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 45.7,
+            "weight": "25%",
+            "weighted_contribution": 11.4,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 11.0,
+            "required_years": 4,
+            "summary": "Detected ~11.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Senior"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": [
+              "AWS Certified",
+              "Certified ScrumMaster",
+              "CSM"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Communication",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [],
+        "additional_skills": [
+          "AWS",
+          "GraphQL",
+          "Leadership",
+          "Linux",
+          "Microservices",
+          "Prisma",
+          "Python",
+          "Redis",
+          "Redux",
+          "TDD",
+          "Webpack"
+        ],
+        "strengths": [
+          "Exceptional skills alignment (23/23 required competencies covered).",
+          "Demonstrates sufficient industry tenure (11.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Senior.",
+          "Holds industry credentials: AWS Certified, Certified ScrumMaster, CSM.",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": []
+      },
+      {
+        "candidate_name": "Priya Sharma",
+        "overall_score": 69.1,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 69.6,
+            "weight": "45%",
+            "weighted_contribution": 31.3,
+            "matched_count": 16,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 39.1,
+            "weight": "25%",
+            "weighted_contribution": 9.8,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Code Review",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "Next.js",
+          "Node.js",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "Tailwind CSS",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Cypress",
+          "Docker",
+          "MySQL",
+          "PostgreSQL",
+          "SQL",
+          "Teamwork"
+        ],
+        "additional_skills": [
+          "Jira",
+          "Redux",
+          "Vite"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, Code Review, Communication.",
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: CI/CD, Cypress, Docker, MySQL."
+        ]
+      },
+      {
+        "candidate_name": "Marcus Chen",
+        "overall_score": 66.5,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 60.9,
+            "weight": "45%",
+            "weighted_contribution": 27.4,
+            "matched_count": 14,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 36.2,
+            "weight": "25%",
+            "weighted_contribution": 9.1,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 12.0,
+            "required_years": 4,
+            "summary": "Detected ~12.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Architect"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Master's Degree",
+            "certifications": [
+              "AWS Solutions Architect",
+              "CKA",
+              "Certified Kubernetes Administrator"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "MySQL",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "SQL",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "Communication",
+          "Cypress",
+          "HTML/CSS",
+          "Jest",
+          "Next.js",
+          "React",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript"
+        ],
+        "additional_skills": [
+          "AWS",
+          "Collaboration",
+          "FastAPI",
+          "GraphQL",
+          "Jira",
+          "Kubernetes",
+          "Linux",
+          "Microservices",
+          "Mocha",
+          "PyTest",
+          "Python",
+          "Redis",
+          "TDD",
+          "Terraform"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, CI/CD, Code Review.",
+          "Demonstrates sufficient industry tenure (12.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Architect.",
+          "Holds industry credentials: AWS Solutions Architect, CKA, Certified Kubernetes Administrator.",
+          "Academic foundation in Master's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: Communication, Cypress, HTML/CSS, Jest."
+        ]
+      },
+      {
+        "candidate_name": "Jordan Taylor",
+        "overall_score": 50.0,
+        "recommendation": "Moderate Match - Additional Assessment Advised",
+        "badge_class": "warning",
+        "breakdown": {
+          "skills": {
+            "score": 39.1,
+            "weight": "45%",
+            "weighted_contribution": 17.6,
+            "matched_count": 9,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 25.8,
+            "weight": "25%",
+            "weighted_contribution": 6.5,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 5.0,
+            "required_years": 4,
+            "summary": "Detected ~5.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 60.0,
+            "weight": "10%",
+            "weighted_contribution": 6.0,
+            "highest_degree": "Associate's / Diploma",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Node.js",
+          "REST APIs",
+          "React"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Bootstrap",
+          "Collaboration"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (5.0 years vs 4+ required).",
+          "Academic foundation in Associate's / Diploma."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (9/23 skills detected).",
+          "Key required skills not evident in resume: CI/CD, Code Review, Cypress, Docker."
+        ]
+      },
+      {
+        "candidate_name": "Samantha Brooks",
+        "overall_score": 35.8,
+        "recommendation": "Low Alignment - Foundational Skill Gaps",
+        "badge_class": "danger",
+        "breakdown": {
+          "skills": {
+            "score": 13.0,
+            "weight": "45%",
+            "weighted_contribution": 5.9,
+            "matched_count": 3,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 7.6,
+            "weight": "25%",
+            "weighted_contribution": 1.9,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Communication",
+          "HTML/CSS",
+          "Problem Solving"
+        ],
+        "missing_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Time Management"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (3/23 skills detected).",
+          "Key required skills not evident in resume: Agile/Scrum, CI/CD, Code Review, Cypress."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9967b780",
+    "timestamp": "2026-09-17 00:14:52",
+    "job_title": "Senior Frontend / Full-Stack Developer",
+    "job_description": "Job Title: Senior Frontend / Full-Stack Developer\nDepartment: Engineering\nLocation: Remote / Hybrid\n\nAbout the Role:\nWe are seeking a talented Senior Frontend / Full-Stack Developer to design and build scalable, user-centric web applications. You will partner closely with product managers and designers to deliver high-quality software experiences.\n\nKey Responsibilities:\n- Build robust, accessible, and high-performance web applications using React, Next.js, and TypeScript.\n- Architect and maintain backend services and REST APIs with Node.js and Express.\n- Model data schemas and optimize database queries using SQL and PostgreSQL.\n- Develop clean, modern, and responsive user interfaces with HTML/CSS and Tailwind CSS.\n- Package applications with Docker and participate in modern CI/CD deployment pipelines.\n- Maintain code reliability and test coverage through unit testing and integration testing.\n- Collaborate in an Agile/Scrum team using Git/GitHub for branching, pull requests, and code reviews.\n\nRequired Qualifications & Skills:\n- 4+ years of professional software engineering experience.\n- Expert knowledge of JavaScript and TypeScript.\n- Proven hands-on experience building production applications with React and Next.js.\n- Strong proficiency in modern UI styling using HTML/CSS and Tailwind CSS.\n- Solid server-side development experience with Node.js and REST APIs.\n- Practical database experience with SQL (PostgreSQL or MySQL).\n- Familiarity with containerization via Docker and CI/CD automation workflows.\n- Experience with unit testing frameworks (e.g. Jest, Cypress).\n- Version control fluency with Git/GitHub.\n- Demonstrated communication, proactive problem solving, and cross-functional teamwork.\n- Bachelor's or Master's degree in Computer Science, Software Engineering, or equivalent practical background.",
+    "candidates": [
+      {
+        "candidate_name": "Alex Rivera",
+        "overall_score": 86.4,
+        "recommendation": "Strong Match - High Priority Interview",
+        "badge_class": "success",
+        "breakdown": {
+          "skills": {
+            "score": 100.0,
+            "weight": "45%",
+            "weighted_contribution": 45.0,
+            "matched_count": 23,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 45.7,
+            "weight": "25%",
+            "weighted_contribution": 11.4,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 11.0,
+            "required_years": 4,
+            "summary": "Detected ~11.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Senior"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": [
+              "AWS Certified",
+              "Certified ScrumMaster",
+              "CSM"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Communication",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [],
+        "additional_skills": [
+          "AWS",
+          "GraphQL",
+          "Leadership",
+          "Linux",
+          "Microservices",
+          "Prisma",
+          "Python",
+          "Redis",
+          "Redux",
+          "TDD",
+          "Webpack"
+        ],
+        "strengths": [
+          "Exceptional skills alignment (23/23 required competencies covered).",
+          "Demonstrates sufficient industry tenure (11.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Senior.",
+          "Holds industry credentials: AWS Certified, Certified ScrumMaster, CSM.",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": []
+      },
+      {
+        "candidate_name": "Priya Sharma",
+        "overall_score": 69.1,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 69.6,
+            "weight": "45%",
+            "weighted_contribution": 31.3,
+            "matched_count": 16,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 39.1,
+            "weight": "25%",
+            "weighted_contribution": 9.8,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Code Review",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Jest",
+          "Next.js",
+          "Node.js",
+          "Problem Solving",
+          "REST APIs",
+          "React",
+          "Tailwind CSS",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Cypress",
+          "Docker",
+          "MySQL",
+          "PostgreSQL",
+          "SQL",
+          "Teamwork"
+        ],
+        "additional_skills": [
+          "Jira",
+          "Redux",
+          "Vite"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, Code Review, Communication.",
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: CI/CD, Cypress, Docker, MySQL."
+        ]
+      },
+      {
+        "candidate_name": "Marcus Chen",
+        "overall_score": 66.5,
+        "recommendation": "Good Match - Recommended for Technical Screening",
+        "badge_class": "primary",
+        "breakdown": {
+          "skills": {
+            "score": 60.9,
+            "weight": "45%",
+            "weighted_contribution": 27.4,
+            "matched_count": 14,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 36.2,
+            "weight": "25%",
+            "weighted_contribution": 9.1,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 12.0,
+            "required_years": 4,
+            "summary": "Detected ~12.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": [
+              "Architect"
+            ]
+          },
+          "education": {
+            "score": 100.0,
+            "weight": "10%",
+            "weighted_contribution": 10.0,
+            "highest_degree": "Master's Degree",
+            "certifications": [
+              "AWS Solutions Architect",
+              "CKA",
+              "Certified Kubernetes Administrator"
+            ]
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "MySQL",
+          "Node.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "REST APIs",
+          "SQL",
+          "Unit testing"
+        ],
+        "missing_skills": [
+          "Communication",
+          "Cypress",
+          "HTML/CSS",
+          "Jest",
+          "Next.js",
+          "React",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript"
+        ],
+        "additional_skills": [
+          "AWS",
+          "Collaboration",
+          "FastAPI",
+          "GraphQL",
+          "Jira",
+          "Kubernetes",
+          "Linux",
+          "Microservices",
+          "Mocha",
+          "PyTest",
+          "Python",
+          "Redis",
+          "TDD",
+          "Terraform"
+        ],
+        "strengths": [
+          "Solid coverage of core technical requirements including Agile/Scrum, CI/CD, Code Review.",
+          "Demonstrates sufficient industry tenure (12.0 years vs 4+ required).",
+          "Demonstrates leadership capacity with titles: Architect.",
+          "Holds industry credentials: AWS Solutions Architect, CKA, Certified Kubernetes Administrator.",
+          "Academic foundation in Master's Degree."
+        ],
+        "areas_for_improvement": [
+          "Key required skills not evident in resume: Communication, Cypress, HTML/CSS, Jest."
+        ]
+      },
+      {
+        "candidate_name": "Jordan Taylor",
+        "overall_score": 50.0,
+        "recommendation": "Moderate Match - Additional Assessment Advised",
+        "badge_class": "warning",
+        "breakdown": {
+          "skills": {
+            "score": 39.1,
+            "weight": "45%",
+            "weighted_contribution": 17.6,
+            "matched_count": 9,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 25.8,
+            "weight": "25%",
+            "weighted_contribution": 6.5,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 5.0,
+            "required_years": 4,
+            "summary": "Detected ~5.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 60.0,
+            "weight": "10%",
+            "weighted_contribution": 6.0,
+            "highest_degree": "Associate's / Diploma",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Agile/Scrum",
+          "Communication",
+          "Express",
+          "Git/GitHub",
+          "HTML/CSS",
+          "JavaScript",
+          "Node.js",
+          "REST APIs",
+          "React"
+        ],
+        "missing_skills": [
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "PostgreSQL",
+          "Problem Solving",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Bootstrap",
+          "Collaboration"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (5.0 years vs 4+ required).",
+          "Academic foundation in Associate's / Diploma."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (9/23 skills detected).",
+          "Key required skills not evident in resume: CI/CD, Code Review, Cypress, Docker."
+        ]
+      },
+      {
+        "candidate_name": "Samantha Brooks",
+        "overall_score": 35.8,
+        "recommendation": "Low Alignment - Foundational Skill Gaps",
+        "badge_class": "danger",
+        "breakdown": {
+          "skills": {
+            "score": 13.0,
+            "weight": "45%",
+            "weighted_contribution": 5.9,
+            "matched_count": 3,
+            "total_required": 23
+          },
+          "text_similarity": {
+            "score": 7.6,
+            "weight": "25%",
+            "weighted_contribution": 1.9,
+            "method": "TF-IDF Vector Cosine Similarity"
+          },
+          "relevant_experience": {
+            "score": 100.0,
+            "weight": "20%",
+            "weighted_contribution": 20.0,
+            "estimated_years": 10.0,
+            "required_years": 4,
+            "summary": "Detected ~10.0 years of professional experience, meeting or exceeding the 4+ years target.",
+            "seniority": []
+          },
+          "education": {
+            "score": 80.0,
+            "weight": "10%",
+            "weighted_contribution": 8.0,
+            "highest_degree": "Bachelor's Degree",
+            "certifications": []
+          }
+        },
+        "matched_skills": [
+          "Communication",
+          "HTML/CSS",
+          "Problem Solving"
+        ],
+        "missing_skills": [
+          "Agile/Scrum",
+          "CI/CD",
+          "Code Review",
+          "Cypress",
+          "Docker",
+          "Express",
+          "Git/GitHub",
+          "JavaScript",
+          "Jest",
+          "MySQL",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "REST APIs",
+          "React",
+          "SQL",
+          "Tailwind CSS",
+          "Teamwork",
+          "TypeScript",
+          "Unit testing"
+        ],
+        "additional_skills": [
+          "Time Management"
+        ],
+        "strengths": [
+          "Demonstrates sufficient industry tenure (10.0 years vs 4+ required).",
+          "Academic foundation in Bachelor's Degree."
+        ],
+        "areas_for_improvement": [
+          "Limited technical match (3/23 skills detected).",
+          "Key required skills not evident in resume: Agile/Scrum, CI/CD, Code Review, Cypress."
+        ]
+      }
+    ]
+  }
+]

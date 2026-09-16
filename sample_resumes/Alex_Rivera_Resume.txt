@@ -1,0 +1,36 @@
+Alex Rivera
+Email: alex.rivera.dev@example.com | GitHub: github.com/alexrivera | Portfolio: alexrivera.io
+San Francisco, CA
+
+SUMMARY
+Senior Full-Stack Engineer with 5+ years of experience designing and shipping high-performance web applications. Specialized in TypeScript, React, Next.js, and Node.js microservices. Proven leader in Agile/Scrum environments with deep experience in CI/CD, Docker containerization, and unit testing.
+
+TECHNICAL SKILLS
+- Languages: TypeScript, JavaScript, SQL, HTML/CSS, Python
+- Frontend: React, Next.js, Tailwind CSS, Redux Toolkit, Webpack
+- Backend & APIs: Node.js, Express, REST APIs, GraphQL, Microservices
+- Databases: PostgreSQL, MySQL, Redis, Prisma ORM
+- Cloud & DevOps: Docker, CI/CD pipelines, Git/GitHub, AWS (ECS, S3, RDS), Linux
+- Testing & Methodologies: Jest, Cypress, Unit testing, TDD, Agile/Scrum, Code Review
+- Core Competencies: Communication, Problem Solving, Teamwork, Technical Leadership
+
+PROFESSIONAL EXPERIENCE
+Senior Full-Stack Developer | Apex Cloud Technologies
+2021 - Present | San Francisco, CA
+- Led a team of 6 engineers in migrating legacy frontends to React and Next.js with TypeScript and Tailwind CSS, reducing page load times by 42%.
+- Architected REST APIs and microservices using Node.js and PostgreSQL, handling over 15M monthly requests with 99.98% uptime.
+- Established automated CI/CD deployment pipelines and containerized all development environments using Docker.
+- Implemented comprehensive unit testing and end-to-end testing with Jest and Cypress, elevating automated test coverage from 45% to 88%.
+- Facilitated Agile/Scrum sprint planning, daily standups, and rigorous Git/GitHub pull request code reviews.
+
+Full-Stack Software Engineer | NexaDigital Labs
+2019 - 2021 | Austin, TX
+- Developed customer-facing web applications using React, JavaScript, Node.js, and SQL.
+- Designed database schemas and optimized complex SQL queries for relational reporting dashboards.
+- Integrated third-party REST APIs and implemented responsive UI designs with HTML/CSS.
+- Collaborated effectively across product, design, and engineering teams to resolve complex technical blockers.
+
+EDUCATION & CERTIFICATIONS
+- Bachelor of Science (B.S.) in Computer Science, University of California, Berkeley (2015 - 2019)
+- AWS Certified Developer - Associate (2022)
+- Certified ScrumMaster (CSM) (2023)

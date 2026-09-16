@@ -1,0 +1,74 @@
+/* AI Resume Screener - Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Nav Active Link */
+.nav-link.active {
+  background-color: rgb(79 70 229 / 0.15);
+  color: #818cf8;
+  border-left: 3px solid #6366f1;
+}
+
+.nav-link:hover:not(.active) {
+  background-color: rgb(255 255 255 / 0.05);
+  color: #f1f5f9;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Candidate Score Badges */
+.badge-success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-primary {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-warning {
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-danger {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Print Styles */
+@media print {
+  aside, header, #modal-loading, #btn-export-dropdown, button {
+    display: none !important;
+  }
+  main {
+    overflow: visible !important;
+    background: white !important;
+  }
+  .view-panel {
+    display: block !important;
+  }
+}

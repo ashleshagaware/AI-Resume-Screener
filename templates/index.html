@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Screener | Academic Decision Support</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="h-full font-sans text-slate-800 antialiased flex flex-col">
+
+  <!-- Top Academic Notice Banner -->
+  <div class="bg-amber-50 border-b border-amber-200 px-4 py-2 text-xs text-amber-900 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <i data-lucide="shield-check" class="w-4 h-4 text-amber-700 flex-shrink-0"></i>
+      <span><strong>Academic Decision-Support Prototype:</strong> 100% Local & Deterministic. Demographic-Blind Evaluation Active.</span>
+    </div>
+    <span class="hidden md:inline-block text-amber-800 font-medium">Internship Project Edition</span>
+  </div>
+
+  <div class="flex-1 flex overflow-hidden">
+    <!-- Sidebar Navigation -->
+    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col flex-shrink-0 border-r border-slate-800 select-none">
+      <div class="p-5 border-b border-slate-800 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-brand-500 flex items-center justify-center text-white font-bold shadow-lg shadow-indigo-500/30">
+          <i data-lucide="file-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-white tracking-tight leading-none">AI Screener</h1>
+          <p class="text-xs text-indigo-300 mt-0.5">Resume & Job Matching</p>
+        </div>
+      </div>
+
+      <!-- Navigation links -->
+      <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
+        <a href="#dashboard" class="nav-link active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors" data-view="dashboard">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+          <span>Dashboard / Overview</span>
+        </a>
+        <a href="#new-screening" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors" data-view="new-screening">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i>
+          <span>New Screening</span>
+        </a>
+        <a href="#results" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors" data-view="results">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span class="flex-1">Results</span>
+          <span id="nav-candidate-badge" class="hidden text-xs bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full font-semibold">0</span>
+        </a>
+        <a href="#comparison" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors" data-view="comparison">
+          <i data-lucide="columns-3" class="w-4 h-4"></i>
+          <span>Candidate Comparison</span>
+        </a>
+        <a href="#history" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors" data-view="history">
+          <i data-lucide="history" class="w-4 h-4"></i>
+          <span class="flex-1">Screening History</span>
+          <span id="nav-history-badge" class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full font-semibold">0</span>
+        </a>
+        <a href="#about" class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors" data-view="about">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Methodology / About</span>
+        </a>
+      </nav>
+
+      <!-- Scoring Weights Card -->
+      <div class="p-4 mx-3 mb-4 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs">
+        <div class="font-semibold text-white mb-2 flex items-center gap-1.5">
+          <i data-lucide="scale" class="w-3.5 h-3.5 text-indigo-400"></i>
+          Transparent Weights
+        </div>
+        <div class="space-y-1.5 text-slate-400">
+          <div class="flex justify-between"><span>Skills:</span> <strong class="text-indigo-300">45%</strong></div>
+          <div class="flex justify-between"><span>Text Similarity:</span> <strong class="text-indigo-300">25%</strong></div>
+          <div class="flex justify-between"><span>Relevant Exp:</span> <strong class="text-indigo-300">20%</strong></div>
+          <div class="flex justify-between"><span>Education & Certs:</span> <strong class="text-indigo-300">10%</strong></div>
+        </div>
+      </div>
+
+      <div class="p-3 border-t border-slate-800 text-xs text-slate-500 text-center">
+        No API Keys • 100% Local Execution
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col overflow-y-auto bg-slate-50">
+      
+      <!-- Top Bar -->
+      <header class="bg-white border-b border-slate-200 px-6 py-3.5 flex items-center justify-between sticky top-0 z-20 shadow-xs">
+        <div class="flex items-center gap-2 text-sm text-slate-500">
+          <span id="current-view-title" class="font-bold text-slate-900 text-base">Dashboard / Overview</span>
+          <span class="text-slate-300">|</span>
+          <span id="header-context-text" class="text-xs text-slate-500">System Ready</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="btn-quick-demo" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold border border-indigo-200 transition-colors shadow-xs">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-indigo-600"></i>
+            <span>Load Demo Screening</span>
+          </button>
+          <a href="#new-screening" class="nav-link-trigger inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-colors shadow-xs" data-target="new-screening">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span>New Screening</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- View Containers -->
+      <div class="p-6 md:p-8 max-w-7xl mx-auto w-full flex-1">
+
+        <!-- =============================================================== -->
+        <!-- VIEW 1: DASHBOARD / OVERVIEW                                     -->
+        <!-- =============================================================== -->
+        <section id="view-dashboard" class="view-panel space-y-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Recruitment Intelligence Overview</h2>
+              <p class="text-sm text-slate-600 mt-1">Explainable AI screening metrics, ranking distribution, and audit summaries.</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="switchView('new-screening')" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-semibold shadow-xs transition flex items-center gap-2">
+                <i data-lucide="play" class="w-4 h-4"></i> Start New Analysis
+              </button>
+            </div>
+          </div>
+
+          <!-- KPI Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="folder-kanban" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Screenings</p>
+                <h3 id="kpi-total-screenings" class="text-2xl font-extrabold text-slate-900 mt-0.5">0</h3>
+                <span class="text-xs text-emerald-600 font-medium flex items-center gap-1 mt-0.5">
+                  <i data-lucide="database" class="w-3 h-3"></i> Saved Locally
+                </span>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="users" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Candidates Screened</p>
+                <h3 id="kpi-total-candidates" class="text-2xl font-extrabold text-slate-900 mt-0.5">0</h3>
+                <span class="text-xs text-blue-600 font-medium flex items-center gap-1 mt-0.5">
+                  <i data-lucide="file-text" class="w-3 h-3"></i> PDF / DOCX / TXT
+                </span>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="gauge" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Average Match</p>
+                <h3 id="kpi-avg-score" class="text-2xl font-extrabold text-slate-900 mt-0.5">--</h3>
+                <span class="text-xs text-slate-500 font-medium">Weighted Score</span>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Ethics & Bias Filter</p>
+                <h3 class="text-2xl font-extrabold text-emerald-600 mt-0.5">100%</h3>
+                <span class="text-xs text-emerald-600 font-medium">Demographics Blind</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Row -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs lg:col-span-2">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">Score Distribution by Candidate</h3>
+                  <p class="text-xs text-slate-500">Component contributions: Skills (45%), Similarity (25%), Exp (20%), Edu (10%)</p>
+                </div>
+                <span id="chart-job-label" class="text-xs bg-slate-100 text-slate-700 font-medium px-2.5 py-1 rounded-md">Latest Run</span>
+              </div>
+              <div class="h-64 relative">
+                <canvas id="dashboardScoreChart"></canvas>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <h3 class="font-bold text-slate-900 text-sm mb-1">Scoring Breakdown Weights</h3>
+                <p class="text-xs text-slate-500 mb-4">Strict academic formula applied to all screenings:</p>
+                <div class="space-y-3">
+                  <div>
+                    <div class="flex justify-between text-xs font-medium mb-1">
+                      <span class="text-slate-700">Skills Matching</span>
+                      <span class="font-bold text-indigo-600">45%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-indigo-600 h-2 rounded-full" style="width: 45%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-xs font-medium mb-1">
+                      <span class="text-slate-700">TF-IDF Semantic Similarity</span>
+                      <span class="font-bold text-blue-600">25%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-blue-600 h-2 rounded-full" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-xs font-medium mb-1">
+                      <span class="text-slate-700">Relevant Experience</span>
+                      <span class="font-bold text-emerald-600">20%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-emerald-600 h-2 rounded-full" style="width: 20%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-xs font-medium mb-1">
+                      <span class="text-slate-700">Education & Credentials</span>
+                      <span class="font-bold text-purple-600">10%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-purple-600 h-2 rounded-full" style="width: 10%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500 bg-slate-50 p-3 rounded-lg">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-slate-400 inline mr-1"></i>
+                Every evaluation provides explainable feedback including matched skills, missing skills, and improvement suggestions.
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Access Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:border-indigo-300 transition-colors cursor-pointer" onclick="loadDemoScreening()">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="p-2.5 rounded-lg bg-indigo-50 text-indigo-600">
+                  <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Interactive Demo Run</h4>
+              </div>
+              <p class="text-xs text-slate-600">Instantly test the screener with our pre-loaded Full-Stack Developer job and 5 diverse fictional candidates.</p>
+              <div class="mt-3 text-xs font-semibold text-indigo-600 flex items-center gap-1">
+                Run Demo Analysis <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:border-blue-300 transition-colors cursor-pointer" onclick="switchView('new-screening')">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="p-2.5 rounded-lg bg-blue-50 text-blue-600">
+                  <i data-lucide="upload-cloud" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Upload Custom Resumes</h4>
+              </div>
+              <p class="text-xs text-slate-600">Drag and drop your own PDF, DOCX, or TXT resume files alongside custom job specifications.</p>
+              <div class="mt-3 text-xs font-semibold text-blue-600 flex items-center gap-1">
+                Upload Resumes <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:border-purple-300 transition-colors cursor-pointer" onclick="switchView('about')">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="p-2.5 rounded-lg bg-purple-50 text-purple-600">
+                  <i data-lucide="book-open-check" class="w-5 h-5"></i>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm">Explainability & Ethics</h4>
+              </div>
+              <p class="text-xs text-slate-600">Review mathematical formulas, TF-IDF vectorization, and demographic fairness policies.</p>
+              <div class="mt-3 text-xs font-semibold text-purple-600 flex items-center gap-1">
+                Read Methodology <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- =============================================================== -->
+        <!-- VIEW 2: NEW SCREENING                                           -->
+        <!-- =============================================================== -->
+        <section id="view-new-screening" class="view-panel hidden space-y-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-200 pb-4">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Configure New Screening</h2>
+              <p class="text-sm text-slate-600">Define position requirements and upload candidate resumes for explainable matching.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <button id="btn-load-demo-job" type="button" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold rounded-lg border border-slate-300 transition flex items-center gap-1.5">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-indigo-600"></i> Load Demo Job
+              </button>
+              <button id="btn-add-demo-resumes" type="button" class="px-3.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-lg border border-indigo-200 transition flex items-center gap-1.5">
+                <i data-lucide="users" class="w-3.5 h-3.5"></i> Add Demo Resumes (5)
+              </button>
+            </div>
+          </div>
+
+          <form id="form-screening" class="space-y-6">
+            <!-- Job Details Section -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4">
+              <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                <i data-lucide="briefcase" class="w-4 h-4 text-indigo-600"></i>
+                1. Job Details & Target Requirements
+              </h3>
+              
+              <div>
+                <label for="input-job-title" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Job Title <span class="text-rose-500">*</span>
+                </label>
+                <input type="text" id="input-job-title" name="job_title" placeholder="e.g. Senior Frontend / Full-Stack Developer" required class="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+              </div>
+
+              <div>
+                <label for="input-job-description" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Job Description & Requirements <span class="text-rose-500">*</span>
+                </label>
+                <textarea id="input-job-description" name="job_description" rows="7" placeholder="Paste the job description, required technical skills (e.g. React, Next.js, Node.js, SQL), years of experience, and credentials..." required class="w-full px-3.5 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none font-mono text-xs transition leading-relaxed"></textarea>
+                <p class="text-xs text-slate-500 mt-1">Tip: Be specific about technical stack and experience targets (e.g. '4+ years') for precise scoring.</p>
+              </div>
+            </div>
+
+            <!-- Resume Upload Section -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                  <i data-lucide="files" class="w-4 h-4 text-indigo-600"></i>
+                  2. Candidate Resumes (PDF, DOCX, TXT)
+                </h3>
+                <span id="selected-files-counter" class="text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-700 rounded-full">
+                  0 candidate(s) staged
+                </span>
+              </div>
+
+              <!-- Drag & Drop Zone -->
+              <div id="drop-zone" class="border-2 border-dashed border-slate-300 hover:border-indigo-500 rounded-xl p-8 text-center bg-slate-50/50 hover:bg-indigo-50/30 transition-colors cursor-pointer">
+                <input type="file" id="file-input" name="files" multiple accept=".pdf,.docx,.doc,.txt" class="hidden">
+                <div class="flex flex-col items-center justify-center pointer-events-none">
+                  <div class="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+                    <i data-lucide="upload" class="w-6 h-6"></i>
+                  </div>
+                  <p class="text-sm font-semibold text-slate-700">
+                    <span class="text-indigo-600 hover:underline">Click to browse</span> or drag and drop resume files here
+                  </p>
+                  <p class="text-xs text-slate-500 mt-1">Supports PDF, Word (.docx), and Plain Text (.txt)</p>
+                </div>
+              </div>
+
+              <!-- Staged Resumes List -->
+              <div id="staged-resumes-container" class="space-y-2 pt-2">
+                <!-- Injected via JavaScript -->
+              </div>
+
+              <!-- Demographic Blindness Notice -->
+              <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 text-xs text-slate-600 flex items-start gap-2.5">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <strong class="text-slate-800">Ethical AI Protection Active:</strong>
+                  The engine automatically removes age, gender pronouns, marital status, race, and health details prior to semantic similarity and skill matching.
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex items-center justify-end gap-3 pt-2">
+              <button type="button" onclick="resetNewScreeningForm()" class="px-4 py-2 border border-slate-300 text-slate-700 hover:bg-slate-100 rounded-lg text-sm font-semibold transition">
+                Reset Form
+              </button>
+              <button id="btn-run-analysis" type="submit" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold shadow-md shadow-indigo-500/20 transition flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4"></i> Run Decision Analysis
+              </button>
+            </div>
+          </form>
+        </section>
+
+
+        <!-- =============================================================== -->
+        <!-- VIEW 3: RESULTS VIEW                                            -->
+        <!-- =============================================================== -->
+        <section id="view-results" class="view-panel hidden space-y-6">
+          <!-- Results Header & Controls -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Analysis Results</span>
+                <h2 id="results-job-title" class="text-2xl font-bold text-slate-900 tracking-tight">Full-Stack Developer</h2>
+                <p id="results-meta-text" class="text-xs text-slate-500 mt-1">Screening ID: -- • Candidates Evaluated: 0</p>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2">
+                <button id="btn-compare-selected" class="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-lg shadow-xs transition flex items-center gap-1.5">
+                  <i data-lucide="columns-3" class="w-3.5 h-3.5"></i> Compare Candidates (<span id="compare-count-badge">0</span>)
+                </button>
+                <div class="relative inline-block text-left">
+                  <button id="btn-export-dropdown" class="px-3.5 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold rounded-lg transition flex items-center gap-1.5">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i> Export
+                  </button>
+                  <div id="export-menu" class="hidden absolute right-0 mt-1 w-36 bg-white border border-slate-200 rounded-lg shadow-lg z-30 py-1 text-xs">
+                    <a href="#" id="export-csv-link" class="block px-4 py-2 text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Export as CSV</a>
+                    <a href="#" id="export-json-link" class="block px-4 py-2 text-slate-700 hover:bg-indigo-50 hover:text-indigo-600">Export as JSON</a>
+                  </div>
+                </div>
+                <button onclick="window.print()" class="px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold rounded-lg transition flex items-center gap-1">
+                  <i data-lucide="printer" class="w-3.5 h-3.5"></i> Print
+                </button>
+              </div>
+            </div>
+
+            <!-- Filter & Sort Bar -->
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100 text-xs">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 font-medium">Filter Tier:</span>
+                <select id="filter-tier-select" class="px-2.5 py-1 border border-slate-300 rounded-md bg-white text-slate-700 outline-none">
+                  <option value="all">All Tiers</option>
+                  <option value="success">High Priority Interview (80%+)</option>
+                  <option value="primary">Technical Screening (65-79%)</option>
+                  <option value="warning">Moderate Match (50-64%)</option>
+                  <option value="danger">Low Alignment (&lt;50%)</option>
+                </select>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 font-medium">Sort by:</span>
+                <select id="sort-by-select" class="px-2.5 py-1 border border-slate-300 rounded-md bg-white text-slate-700 outline-none">
+                  <option value="overall">Overall Match Score</option>
+                  <option value="skills">Skills Match (45%)</option>
+                  <option value="similarity">Text Similarity (25%)</option>
+                  <option value="experience">Experience (20%)</option>
+                  <option value="education">Education (10%)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Candidates List Container -->
+          <div id="results-cards-container" class="space-y-4">
+            <!-- Rendered by JavaScript -->
+          </div>
+        </section>
+
+
+        <!-- =============================================================== -->
+        <!-- VIEW 4: CANDIDATE COMPARISON                                    -->
+        <!-- =============================================================== -->
+        <section id="view-comparison" class="view-panel hidden space-y-6">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Side-by-Side Candidate Comparison</h2>
+                <p class="text-sm text-slate-600 mt-1">Multi-dimensional radar visualization and skill overlap matrix.</p>
+              </div>
+              <div class="text-xs text-slate-500">
+                Select candidates below to compare in real time.
+              </div>
+            </div>
+
+            <!-- Candidate selector pills -->
+            <div id="comparison-selector-pills" class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-100">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Comparison Grid: Radar Chart + Metric Table -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Radar Chart Card -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs lg:col-span-5 flex flex-col items-center">
+              <h3 class="font-bold text-slate-900 text-sm mb-1 self-start">Multi-Dimensional Capability Radar</h3>
+              <p class="text-xs text-slate-500 mb-4 self-start">Comparing overall, skills, similarity, experience, and education</p>
+              <div class="w-full max-w-sm h-72 relative">
+                <canvas id="comparisonRadarChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Side-by-side Table Card -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs lg:col-span-7 overflow-x-auto">
+              <h3 class="font-bold text-slate-900 text-sm mb-4">Metric Comparison Summary</h3>
+              <table class="w-full text-xs text-left border-collapse">
+                <thead>
+                  <tr id="comp-table-head" class="border-b border-slate-200 text-slate-500 uppercase font-semibold">
+                    <th class="py-2.5 pr-4">Dimension</th>
+                    <!-- Injected dynamically -->
+                  </tr>
+                </thead>
+                <tbody id="comp-table-body" class="divide-y divide-slate-100">
+                  <!-- Injected dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Skills Coverage Matrix -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs overflow-x-auto">
+            <h3 class="font-bold text-slate-900 text-sm mb-1">Required Skills Coverage Matrix</h3>
+            <p class="text-xs text-slate-500 mb-4">Explicit technical requirement verification across compared candidates</p>
+            <table class="w-full text-xs text-left border-collapse">
+              <thead>
+                <tr id="matrix-table-head" class="border-b border-slate-200 text-slate-500 uppercase font-semibold bg-slate-50">
+                  <th class="py-2.5 px-3">Required Competency</th>
+                  <!-- Injected dynamically -->
+                </tr>
+              </thead>
+              <tbody id="matrix-table-body" class="divide-y divide-slate-100">
+                <!-- Injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <!-- =============================================================== -->
+        <!-- VIEW 5: SCREENING HISTORY                                       -->
+        <!-- =============================================================== -->
+        <section id="view-history" class="view-panel hidden space-y-6">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Screening History</h2>
+                <p class="text-sm text-slate-600 mt-1">Locally persisted candidate screening sessions and decision records.</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="clearHistoryRecords()" class="px-3 py-1.5 text-xs text-rose-600 hover:bg-rose-50 border border-rose-200 rounded-lg font-semibold transition flex items-center gap-1">
+                  <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Clear All History
+                </button>
+              </div>
+            </div>
+
+            <!-- History Table -->
+            <div class="mt-5 overflow-x-auto">
+              <table class="w-full text-xs text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200 text-slate-500 uppercase font-semibold bg-slate-50">
+                    <th class="py-3 px-4">Date & Time</th>
+                    <th class="py-3 px-4">Position / Job Title</th>
+                    <th class="py-3 px-4 text-center">Candidates</th>
+                    <th class="py-3 px-4">Top Candidate</th>
+                    <th class="py-3 px-4 text-center">Avg Score</th>
+                    <th class="py-3 px-4 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-body" class="divide-y divide-slate-100">
+                  <!-- Injected dynamically -->
+                </tbody>
+              </table>
+              <div id="history-empty-state" class="py-12 text-center text-slate-400 hidden">
+                <i data-lucide="archive" class="w-10 h-10 mx-auto mb-2 text-slate-300"></i>
+                <p class="text-sm font-medium">No past screenings recorded yet.</p>
+                <p class="text-xs text-slate-400 mt-0.5">Run a new screening or load the demo dataset to begin.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- =============================================================== -->
+        <!-- VIEW 6: METHODOLOGY / ABOUT                                     -->
+        <!-- =============================================================== -->
+        <section id="view-about" class="view-panel hidden space-y-6">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-6">
+            <div>
+              <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Academic Documentation</span>
+              <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Methodology & Explainable AI Architecture</h2>
+              <p class="text-sm text-slate-600 mt-1">Complete disclosure of mathematical weighting, natural language processing, and ethical bias controls.</p>
+            </div>
+
+            <!-- Academic Disclaimer Box -->
+            <div class="p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl text-amber-900 text-sm">
+              <div class="font-bold flex items-center gap-2 mb-1">
+                <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+                Academic Demonstration Notice
+              </div>
+              <p class="text-xs leading-relaxed text-amber-800">
+                "{{ disclaimer }}"
+              </p>
+            </div>
+
+            <!-- Mathematical Model -->
+            <div class="border border-slate-200 rounded-xl p-5 bg-slate-50">
+              <h3 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2">
+                <i data-lucide="function-square" class="w-4 h-4 text-indigo-600"></i>
+                Mathematical Scoring Model
+              </h3>
+              <p class="text-xs text-slate-600 mb-3">
+                The overall match score is determined by a transparent linear combination of four normalized components:
+              </p>
+              <div class="p-4 bg-white rounded-lg border border-slate-200 text-center font-mono text-xs sm:text-sm text-slate-800 shadow-xs">
+                <strong>Overall Match Score</strong> = (<strong>0.45</strong> × S<sub>skills</sub>) + (<strong>0.25</strong> × S<sub>similarity</sub>) + (<strong>0.20</strong> × S<sub>experience</sub>) + (<strong>0.10</strong> × S<sub>education</sub>)
+              </div>
+            </div>
+
+            <!-- Detailed Component Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 border border-slate-200 rounded-xl bg-white space-y-2">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-600"></i>
+                    1. Skills Match (45%)
+                  </h4>
+                  <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-2 py-0.5 rounded">Weight: 45%</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Canonical taxonomy matching with synonym normalization (e.g. <code>react.js</code> → <code>React</code>, <code>k8s</code> → <code>Kubernetes</code>). Calculates exact overlap percentage between required competencies and candidate resumes.
+                </p>
+              </div>
+
+              <div class="p-4 border border-slate-200 rounded-xl bg-white space-y-2">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                    <i data-lucide="binary" class="w-4 h-4 text-blue-600"></i>
+                    2. Text Similarity (25%)
+                  </h4>
+                  <span class="text-xs bg-blue-50 text-blue-700 font-bold px-2 py-0.5 rounded">Weight: 25%</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  TF-IDF vector representation combining unigrams and bigrams with cosine similarity measurement. Measures contextual vocabulary alignment while penalizing irrelevant keyword stuffing.
+                </p>
+              </div>
+
+              <div class="p-4 border border-slate-200 rounded-xl bg-white space-y-2">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                    <i data-lucide="clock" class="w-4 h-4 text-emerald-600"></i>
+                    3. Relevant Experience (20%)
+                  </h4>
+                  <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded">Weight: 20%</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Isolates professional work history, parsing employment dates and duration phrases. Computes ratio to target experience targets (e.g., 4+ years) and recognizes leadership seniority (Senior, Lead, Staff).
+                </p>
+              </div>
+
+              <div class="p-4 border border-slate-200 rounded-xl bg-white space-y-2">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-purple-600"></i>
+                    4. Education & Certs (10%)
+                  </h4>
+                  <span class="text-xs bg-purple-50 text-purple-700 font-bold px-2 py-0.5 rounded">Weight: 10%</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Evaluates degree hierarchy (Ph.D., Master's, Bachelor's, Associate's) paired with recognized industry certifications (AWS, Azure, GCP, CKA, Scrum Master).
+                </p>
+              </div>
+            </div>
+
+            <!-- Fairness Policy Details -->
+            <div class="border border-emerald-200 rounded-xl p-5 bg-emerald-50/50 space-y-3">
+              <h3 class="text-sm font-bold text-emerald-900 flex items-center gap-2">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-emerald-700"></i>
+                Ethical AI & Blind Merit Policy
+              </h3>
+              <p class="text-xs text-emerald-800 leading-relaxed">
+                In adherence to non-discriminatory hiring guidelines, this system explicitly forbids the inference or evaluation of:
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-medium text-emerald-900">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 text-rose-500"></i> Race & Ethnicity
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 text-rose-500"></i> Gender & Pronouns
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 text-rose-500"></i> Age & Date of Birth
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 text-rose-500"></i> Religion & Beliefs
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 text-rose-500"></i> Disability & Health
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="x-circle" class="w-3.5 h-3.5 text-rose-500"></i> Marital & Family Status
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer Academic Disclaimer -->
+      <footer class="bg-white border-t border-slate-200 px-6 py-4 text-center text-xs text-slate-500">
+        <p><strong>AI Resume Screener</strong> • College Internship Capstone Project</p>
+        <p class="text-[11px] text-slate-400 mt-1">
+          Disclaimer: This is an academic decision-support demonstration and should not be used as the sole basis for employment decisions.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Detailed Candidate Inspection Modal -->
+  <div id="modal-candidate-detail" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in duration-150">
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div>
+          <span id="modal-rank-badge" class="text-xs font-bold text-indigo-600 uppercase">Rank #1</span>
+          <h3 id="modal-candidate-name" class="text-xl font-bold text-slate-900">Alex Rivera</h3>
+          <p id="modal-recommendation-text" class="text-xs text-slate-500 mt-0.5">Recommendation</p>
+        </div>
+        <div class="text-right">
+          <div id="modal-overall-score" class="text-3xl font-extrabold text-indigo-600">86.4%</div>
+          <span class="text-[10px] text-slate-400 uppercase font-semibold">Match Score</span>
+        </div>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-5 text-xs text-slate-700">
+        <!-- 4 Component Score Bars -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-slate-500 block text-[11px]">Skills (45%)</span>
+            <strong id="modal-score-skills" class="text-lg font-bold text-indigo-600">100%</strong>
+            <span id="modal-contrib-skills" class="block text-[10px] text-slate-400">+45.0 pts</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-slate-500 block text-[11px]">Similarity (25%)</span>
+            <strong id="modal-score-sim" class="text-lg font-bold text-blue-600">45.7%</strong>
+            <span id="modal-contrib-sim" class="block text-[10px] text-slate-400">+11.4 pts</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-slate-500 block text-[11px]">Experience (20%)</span>
+            <strong id="modal-score-exp" class="text-lg font-bold text-emerald-600">100%</strong>
+            <span id="modal-contrib-exp" class="block text-[10px] text-slate-400">+20.0 pts</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-slate-500 block text-[11px]">Education (10%)</span>
+            <strong id="modal-score-edu" class="text-lg font-bold text-purple-600">100%</strong>
+            <span id="modal-contrib-edu" class="block text-[10px] text-slate-400">+10.0 pts</span>
+          </div>
+        </div>
+
+        <!-- Matched Skills -->
+        <div>
+          <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Matched Skills
+          </h4>
+          <div id="modal-matched-skills" class="flex flex-wrap gap-1.5">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <!-- Missing Skills -->
+        <div>
+          <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-1.5">
+            <i data-lucide="alert-circle" class="w-4 h-4 text-amber-500"></i> Missing / Unmentioned Skills
+          </h4>
+          <div id="modal-missing-skills" class="flex flex-wrap gap-1.5">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <!-- Experience & Education Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <strong class="text-slate-900 block mb-1">Work Experience</strong>
+            <p id="modal-exp-summary" class="text-slate-600">Summary</p>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <strong class="text-slate-900 block mb-1">Academic & Certs</strong>
+            <p id="modal-edu-summary" class="text-slate-600">Summary</p>
+          </div>
+        </div>
+
+        <!-- Strengths -->
+        <div>
+          <h4 class="font-bold text-slate-900 mb-1.5 flex items-center gap-1.5 text-emerald-700">
+            <i data-lucide="thumbs-up" class="w-4 h-4"></i> Candidate Strengths
+          </h4>
+          <ul id="modal-strengths-list" class="space-y-1 text-slate-600 list-disc list-inside">
+            <!-- Injected via JS -->
+          </ul>
+        </div>
+
+        <!-- Areas for Improvement -->
+        <div>
+          <h4 class="font-bold text-slate-900 mb-1.5 flex items-center gap-1.5 text-amber-700">
+            <i data-lucide="help-circle" class="w-4 h-4"></i> Areas for Improvement / Questions
+          </h4>
+          <ul id="modal-improvement-list" class="space-y-1 text-slate-600 list-disc list-inside">
+            <!-- Injected via JS -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-4 border-t border-slate-200 bg-slate-50 flex justify-end">
+        <button onclick="closeCandidateModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg text-xs font-semibold transition">
+          Close Inspection
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Animation Modal -->
+  <div id="modal-loading" class="fixed inset-0 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl space-y-4">
+      <div class="w-14 h-14 mx-auto rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 animate-pulse">
+        <i data-lucide="cpu" class="w-7 h-7"></i>
+      </div>
+      <h3 class="text-lg font-bold text-slate-900">Running Decision Analysis</h3>
+      <p id="loading-step-text" class="text-xs text-slate-500 font-medium">Initializing deterministic screening engine...</p>
+      
+      <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+        <div id="loading-progress-bar" class="bg-indigo-600 h-2 rounded-full transition-all duration-300" style="width: 15%"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

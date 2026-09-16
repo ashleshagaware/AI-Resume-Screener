@@ -1,0 +1,113 @@
+# Skill Taxonomy, Synonyms, and Education Definitions for Explainable AI Screener
+
+SKILL_TAXONOMY = {
+    'Technical Skills': {
+        'Languages': ['JavaScript', 'TypeScript', 'Python', 'Java', 'C++', 'C#', 'Go', 'Rust', 'Ruby', 'PHP', 'SQL', 'HTML/CSS'],
+        'Frontend': ['React', 'Next.js', 'Vue.js', 'Angular', 'Tailwind CSS', 'Bootstrap', 'Sass', 'Redux', 'Svelte', 'Webpack', 'Vite'],
+        'Backend': ['Node.js', 'Express', 'Django', 'FastAPI', 'Flask', 'Spring Boot', 'REST APIs', 'GraphQL', 'Microservices'],
+        'Databases': ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'SQLite', 'Prisma', 'DynamoDB'],
+        'DevOps & Cloud': ['Docker', 'Kubernetes', 'CI/CD', 'Git/GitHub', 'AWS', 'Azure', 'GCP', 'Linux', 'Terraform', 'Nginx'],
+        'Testing': ['Unit testing', 'Jest', 'Cypress', 'PyTest', 'Mocha', 'Selenium', 'TDD']
+    },
+    'Methodologies & Soft Skills': {
+        'Agile & Workflow': ['Agile/Scrum', 'Jira', 'Kanban', 'CI/CD', 'Code Review'],
+        'Professional': ['Communication', 'Problem Solving', 'Teamwork', 'Leadership', 'Mentorship', 'Time Management', 'Collaboration']
+    }
+}
+
+SYNONYMS = {
+    'js': 'JavaScript',
+    'javascript': 'JavaScript',
+    'typescript': 'TypeScript',
+    'ts': 'TypeScript',
+    'react': 'React',
+    'reactjs': 'React',
+    'react.js': 'React',
+    'nextjs': 'Next.js',
+    'next.js': 'Next.js',
+    'next': 'Next.js',
+    'html': 'HTML/CSS',
+    'css': 'HTML/CSS',
+    'html5': 'HTML/CSS',
+    'css3': 'HTML/CSS',
+    'html/css': 'HTML/CSS',
+    'tailwind': 'Tailwind CSS',
+    'tailwindcss': 'Tailwind CSS',
+    'node': 'Node.js',
+    'nodejs': 'Node.js',
+    'node.js': 'Node.js',
+    'express': 'Express',
+    'expressjs': 'Express',
+    'rest': 'REST APIs',
+    'rest api': 'REST APIs',
+    'rest apis': 'REST APIs',
+    'restful': 'REST APIs',
+    'restful apis': 'REST APIs',
+    'sql': 'SQL',
+    'postgres': 'PostgreSQL',
+    'postgresql': 'PostgreSQL',
+    'mysql': 'MySQL',
+    'mongo': 'MongoDB',
+    'mongodb': 'MongoDB',
+    'git': 'Git/GitHub',
+    'github': 'Git/GitHub',
+    'git/github': 'Git/GitHub',
+    'gitlab': 'Git/GitHub',
+    'docker': 'Docker',
+    'containerization': 'Docker',
+    'containers': 'Docker',
+    'k8s': 'Kubernetes',
+    'kubernetes': 'Kubernetes',
+    'ci/cd': 'CI/CD',
+    'cicd': 'CI/CD',
+    'continuous integration': 'CI/CD',
+    'unit testing': 'Unit testing',
+    'unit tests': 'Unit testing',
+    'unit test': 'Unit testing',
+    'jest': 'Jest',
+    'cypress': 'Cypress',
+    'agile': 'Agile/Scrum',
+    'scrum': 'Agile/Scrum',
+    'agile/scrum': 'Agile/Scrum',
+    'jira': 'Jira',
+    'communication': 'Communication',
+    'problem solving': 'Problem Solving',
+    'problem-solving': 'Problem Solving',
+    'teamwork': 'Teamwork',
+    'collaboration': 'Collaboration',
+    'leadership': 'Leadership',
+    'python': 'Python',
+    'django': 'Django',
+    'fastapi': 'FastAPI',
+    'flask': 'Flask',
+    'java': 'Java',
+    'spring': 'Spring Boot',
+    'spring boot': 'Spring Boot',
+    'aws': 'AWS',
+    'amazon web services': 'AWS',
+    'gcp': 'GCP',
+    'google cloud': 'GCP',
+    'azure': 'Azure',
+    'linux': 'Linux',
+    'redis': 'Redis',
+    'graphql': 'GraphQL',
+    'microservices': 'Microservices',
+    'tdd': 'TDD',
+    'code review': 'Code Review',
+    'code reviews': 'Code Review'
+}
+
+DEGREE_LEVELS = {
+    'doctorate': {'keywords': ['phd', 'ph.d', 'doctorate', 'doctor of philosophy'], 'weight': 100, 'label': 'Ph.D. / Doctorate'},
+    'master': {'keywords': ['master', 'masters', 'm.s', 'ms', 'm.sc', 'msc', 'm.tech', 'mtech', 'mca', 'mba'], 'weight': 90, 'label': 'Master\'s Degree'},
+    'bachelor': {'keywords': ['bachelor', 'bachelors', 'b.s', 'bs', 'b.sc', 'bsc', 'b.tech', 'btech', 'b.e', 'be', 'bca', 'b.a', 'ba'], 'weight': 80, 'label': 'Bachelor\'s Degree'},
+    'associate': {'keywords': ['associate', 'a.s', 'as', 'diploma'], 'weight': 60, 'label': 'Associate\'s / Diploma'},
+    'bootcamp': {'keywords': ['bootcamp', 'certificate of completion', 'coding academy', 'nano degree', 'nanodegree'], 'weight': 50, 'label': 'Bootcamp / Nanodegree'}
+}
+
+CERTIFICATIONS = [
+    'AWS Certified', 'AWS Solutions Architect', 'AWS Developer', 'AWS Cloud Practitioner',
+    'Azure Certified', 'Azure Fundamentals', 'Google Cloud Certified', 'GCP Professional',
+    'CKA', 'Certified Kubernetes Administrator', 'Scrum Master', 'Certified ScrumMaster', 'CSM',
+    'PMP', 'Project Management Professional', 'Meta Certified', 'CompTIA Security+', 'CompTIA Network+'
+]

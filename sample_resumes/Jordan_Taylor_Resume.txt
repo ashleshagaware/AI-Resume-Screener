@@ -1,0 +1,30 @@
+Jordan Taylor
+Email: jordan.taylor.dev@example.com | Portfolio: jordantaylor.codes
+Chicago, IL
+
+CAREER PROFILE
+Motivated Junior Web Developer with 1.5 years of experience building responsive websites and single-page applications. Solid working foundation in JavaScript, HTML/CSS, basic React, and Git. Rapid learner passionate about expanding full-stack skills and contributing to high-impact projects.
+
+TECHNICAL SKILLS
+- Web: JavaScript, HTML/CSS, Bootstrap, Basic React, JSON
+- Backend Basics: Basic Node.js, Express, REST APIs
+- Tools: Git/GitHub, VS Code, npm, Netlify
+- Practices: Agile, Team Collaboration, Communication, Fast Learner
+
+EXPERIENCE
+Junior Web Developer | Catalyst Creative Agency
+2023 - Present | Chicago, IL
+- Assisted in building landing pages and web components using HTML/CSS, JavaScript, and React.
+- Connected client frontends to third-party REST APIs.
+- Maintained source code repositories and submitted pull requests using Git/GitHub.
+- Participated in weekly team sprint check-ins and creative reviews.
+
+Web Development Intern | TechLaunch Studio
+Summer 2022 | Chicago, IL
+- Updated website content and stylesheets with modern HTML/CSS.
+- Tested user registration forms and debugged JavaScript UI glitches.
+- Gained foundational exposure to Agile development practices.
+
+EDUCATION
+- Associate Degree in Applied Science (Web Development), City Colleges of Chicago (2020 - 2022)
+- Certificate of Completion, Full-Stack Web Development Bootcamp (2022)
